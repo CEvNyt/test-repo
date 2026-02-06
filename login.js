@@ -6,8 +6,8 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     const message = document.getElementById('message');
     
     if (username === 'admin' && password === 'password') {
-        message.textContent = 'Login successful!';
-        message.className = 'success';
+        sessionStorage.setItem('username', username);
+        window.location.href = 'dashboard.html';
     } else {
         message.textContent = 'Invalid credentials';
         message.className = 'error';
